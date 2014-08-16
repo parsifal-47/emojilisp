@@ -2,7 +2,7 @@ var buster = require("buster");
 var assert = buster.referee.assert;
 var lex = require("../interpreter/lex");
 
-buster.testCase("A module", {
+buster.testCase("Lex trivial", {
     "at least plain list of emoji should be parsed": function () {
     	var sampleSet = "( 😁🙏✂➰🚀🛀 Ⓜ 🅰🉑0⃣9⃣™㊙🀄🗿😀😶🚁🛅🌍🕧1️⃣🔹🇬🇧🏠🌽🎍🌊🐶💭😄😊😟🔢🐷😺⚇)";
     	var result = lex.parse(sampleSet);
