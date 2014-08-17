@@ -1,0 +1,78 @@
+{
+	"name": "stdlib set",
+	"programs": [{
+		"name":"fibonacci function",
+		"program": ["defun", 
+						["id", 1], 
+							"(", 
+								["id", 2]
+							")",
+						"(",
+							"if",
+								"(",
+									"or",
+									"(",
+										"equals", ["id", 2], 0,
+									")"
+									"(",
+										"equals", ["id", 2], 1,
+									")"
+								")",
+								1,
+								"(",
+									"plus",
+									"(",
+										["id", 1],
+										"(",
+											"minus", ["id", 2], 1
+										")"
+									")",
+									"(",
+										["id", 1],
+										"(",
+											"minus", ["id", 2], 2
+										")"
+									")"								
+								")"
+						")"
+					")"],
+		"tests": [
+			{"program":["(", ["id", 1], 1, ")"], 
+			 "result": 1},
+			{"program":["(", ["id", 1], 4, ")"], 
+			 "result": 5}
+			]
+	},
+	{
+		"name":"if example",
+		"program": ["(", 
+						"if", 
+							"(", 
+								"moreThan", 1, 2, 
+							")",
+							3, 
+							4,
+					")"],
+		"result": [4]
+	},
+	{
+		"name":"car example",
+		"program": ["(", 
+						"car", 
+							"(", 
+								"list", 1, 2, 3, 4, 5
+							")",
+					")"],
+		"result": [1]
+	},
+	{
+		"name":"cdr example",
+		"program": ["(", 
+						"cdr", 
+							"(", 
+								"list", 1, 2, 3, 4, 5
+							")",
+					")"],
+		"result": [5]
+	}]
+}

@@ -1,11 +1,11 @@
 setup:
 	npm install
 
-rebuild-lex:
+rebuild:
 	node rebuild
 
 run:
-	node eli
+	node interactive
 
 test:
 	@./node_modules/buster/bin/buster-test

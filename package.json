@@ -3,7 +3,7 @@
 	"url": "https://github.com/parsifal-47/emojilisp/issues/",
 	"license" : "BSD-3-Clause",
 	"version" : "0.0.1",
-	"main" : "eli.js",
+	"main" : "interactive.js",
 	"repository" : { 
 		"type" : "git",
 		"url" : "https://github.com/parsifal-47/emojilisp.git"
