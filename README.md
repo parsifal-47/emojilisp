@@ -1,7 +1,7 @@
-emojilisp
+Emojilisp
 ========
 
-Javascript interpreter for emojilisp
+Javascript interpreter generator for emojilisp
 
 work in progress
 

@@ -20,10 +20,10 @@ fs.readdir('templates', function(err, data) {
   for (var i = 0; i<data.length; i++) {
     var examples = require("./templates/" + data[i]);
     for (var j = 0; j< examples.length; j++) {
-      fs.writeFile('examples/' + (examples[i].name.split(" ").join("_")) + ".eli",
-        template.encode(examples[i].program), function (err) {
+      fs.writeFile('examples/' + (examples[j].name.split(" ").join("_")) + ".eli",
+        template.encode(examples[j].program), function (err) {
           if (err) return console.log(err);
-          console.log(examples[i].name + ' - ok');
+          console.log('ok');
         });
     }
   }

@@ -4,6 +4,9 @@ setup:
 rebuild:
 	node rebuild
 
+clean:
+	rm examples/*
+
 run:
 	node interactive
 
