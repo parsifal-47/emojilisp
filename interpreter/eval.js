@@ -1,12 +1,49 @@
 module.exports = (function() {
-	var context = [];
+	var context = {};
 	var lex = require("lex.js");
-	function execute(AST) {
-		
-	}
-	function addAndRun(text) {
-		context.push(lex.parse(text));
+	var template = require("template.js");
+	var stdlib = require("stdlib.js");
 
+	function execute(AST) {
+		if (AST.type === "Literal") return AST.value;
+		if (AST.type === "List") {
+			if (AST.contents.length < 1) 
+				throw new Error("Cannot execute empty list");
+
+			if (AST.contents[0].type === "Literal")
+				throw new Error("First element shouldn't be literal");
+
+			if (AST.contents[0].type === "Identifier") {
+				var dd = template.decode(AST.contents[0].name);
+				if (context.jsFunctions[dd]) {
+					return context.jsFunctions[dd](context, tail(AST));
+				}
+				if (context.functions[dd]) {
+					throw new Error("not implemented");
+				}
+				throw new Error(AST.contents[0].name + " is undefined");
+			}
+		}
+		if (AST.type === "Identifier") {
+			throw new Error("Don't know how to execute Identifier");
+		}
+		throw new Error("Unexpected AST node");
 	}
-	return {add:addAndRun};
+
+	function run(text) {
+		execute(lex.parse(template.preprocess(text)));
+	}
+
+	function cleanContext() {
+		context.functions = {};
+	}
+
+	context.execute = execute;
+	context.functions = {};
+	context.jsFunctions = stdlib.functions;
+
+	return {
+		cleanContext: cleanContext,
+		run:run
+	};
 })();

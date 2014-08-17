@@ -1,6 +1,7 @@
 module.exports = (function() {
 	var confDir = 'conf';
 	var sets = [];
+	var base = require("../conf/base.json");
 	var fs = require("fs");
 	fs.readdir(confDir, function(err, data) {
 	  if (err) return console.log(err);
@@ -20,5 +21,23 @@ module.exports = (function() {
 		}
 		return list.join("");
 	}
-	return {encode:encode};
+
+	function preprocess(str) {
+		for (var i in base) str.split(base[i]).join(i);
+		return str;
+	}
+
+	function decode(name) {
+		for (var j = 0; j < sets.length; j++) {
+			for (var k in sets[j])
+				if (sets[j][k] === name) return k;
+		}
+		return name;
+	}
+	
+	return {
+		encode: encode,
+		preprocess: preprocess,
+		decode: decode
+	};
 })();
