@@ -2,12 +2,12 @@
 
 var fs = require('fs');
 var PEG = require("pegjs");
-var template = require('./interpreter/template.js');
+var template = require('./lib/template.js');
 
-fs.readFile('interpreter/el.pegjs', 'utf8', function (err,data) {
+fs.readFile('lib/el.pegjs', 'utf8', function (err,data) {
   if (err) return console.log(err);
   var parser = PEG.buildParser(data, {output:"source"});
-  fs.writeFile('interpreter/lex.js', 'try { module = module || {}; } ' +
+  fs.writeFile('lib/lex.js', 'try { module = module || {}; } ' +
 			    'catch (e) { module = {}; } module.exports = ' + 
 				parser + ';', function (err) {
 	  if (err) return console.log(err);

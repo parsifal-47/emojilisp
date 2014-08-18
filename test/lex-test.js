@@ -1,6 +1,6 @@
 var buster = require("buster");
 var assert = buster.referee.assert;
-var lex = require("../interpreter/lex");
+var lex = require("../lib/lex.js");
 
 buster.testCase("Lex trivial", {
     "at least plain list of emoji should be parsed": function () {
