@@ -8,6 +8,7 @@ work in progress
 to setup nodejs version use "make setup"
 
 to run emoji lisp interactive run "make run"
+to run particular emojilisp program "make run examples/something.eli" after executing you enter repl
 
 to run tests "make test"
 

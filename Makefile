@@ -8,7 +8,7 @@ clean:
 	rm examples/*
 
 run:
-	node interactive
+	node interactive $(filter-out $@,$(MAKECMDGOALS))
 
 test:
 	@./node_modules/buster/bin/buster-test

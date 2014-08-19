@@ -102,6 +102,14 @@
     "result": 7
 },
 {
+    "name":"lambda example",
+    "program": ["(",
+                    "(", "lambda", "(", "id-1", ")", "(", "plus", "id-1", "7", ")", ")",
+                    "2", 
+                ")"],
+    "result": 9
+},
+{
     "name":"self eval",
     "program": ["(", 
                     "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "quote", "quote", ")", "id-1", ")", ")", ")",
