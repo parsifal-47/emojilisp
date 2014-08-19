@@ -55,6 +55,19 @@
     "result": [4]
 },
 {
+    "name":"if example 2",
+    "program": ["(", 
+                    "if", 
+                        "(", 
+                            "lessthan", 1, " ", 2, 
+                        ")",
+                        3, 
+                        " ",
+                        4,
+                ")"],
+    "result": [3]
+},
+{
     "name":"car example",
     "program": ["(", 
                     "car", 
@@ -73,4 +86,26 @@
                         ")",
                 ")"],
     "result": [5]
+},
+{
+    "name":"minus example",
+    "program": ["(",
+                    "minus", "5", "2",
+                ")"],
+    "result": [3]
+},
+{
+    "name":"plus example",
+    "program": ["(",
+                    "minus", "5", "2",
+                ")"],
+    "result": [7]
+},
+{
+    "name":"self eval",
+    "program": ["(", 
+                    "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "quote", "quote", ")", "id-1", ")", ")", ")",
+                    "(", "quote", "(", "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "(", "quote", "quote", ")",
+                    "id-1", ")", ")", ")", ")",
+                ")"]
 }]
