@@ -112,7 +112,7 @@
 {
     "name":"self eval",
     "program": ["(", 
-                    "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "quote", "quote", ")", "id-1", ")", ")", ")",
+                    "(", "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "(", "quote", "quote", ")", "id-1", ")", ")", ")",
                     "(", "quote", "(", "lambda", "(", "id-1", ")", "(", "list", "id-1", "(", "list", "(", "quote", "quote", ")",
                     "id-1", ")", ")", ")", ")",
                 ")"]
