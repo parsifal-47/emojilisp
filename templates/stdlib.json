@@ -52,7 +52,7 @@
                         " ",
                         4,
                 ")"],
-    "result": [4]
+    "result": 4
 },
 {
     "name":"if example 2",
@@ -65,7 +65,7 @@
                         " ",
                         4,
                 ")"],
-    "result": [3]
+    "result": 3
 },
 {
     "name":"car example",
@@ -75,7 +75,7 @@
                             "list", 1, " ", 2, " ", 3, " ", 4, " ", 5,
                         ")",
                 ")"],
-    "result": [1]
+    "result": 1
 },
 {
     "name":"cdr example",
@@ -85,21 +85,21 @@
                             "list", 1, " ", 2, " ", 3, " ", 4, " ", 5,
                         ")",
                 ")"],
-    "result": [5]
+    "result": 5
 },
 {
     "name":"minus example",
     "program": ["(",
-                    "minus", "5", "2",
+                    "minus", 5, " ", 2,
                 ")"],
-    "result": [3]
+    "result": 3
 },
 {
     "name":"plus example",
     "program": ["(",
-                    "minus", "5", "2",
+                    "plus", 5, " ", 2,
                 ")"],
-    "result": [7]
+    "result": 7
 },
 {
     "name":"self eval",
