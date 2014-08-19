@@ -1,6 +1,6 @@
 [{
     "name":"fibonacci function",
-    "program": ["defun", 
+    "program": ["(", "defun", 
                     "id-1", 
                         "(", 
                             "id-2",
