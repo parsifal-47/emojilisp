@@ -7,6 +7,7 @@ if (process.argv.length> 2) {
     if (err) return console.log(err);  
     console.log(interpreter.run(data));
   });
+  return;
 }
 
 function eval(cmd, context, filename, callback) {
