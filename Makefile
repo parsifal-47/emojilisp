@@ -13,4 +13,4 @@ run:
 test:
 	@./node_modules/buster/bin/buster-test
 
-.PHONY: test
+.PHONY: test setup rebuild clean run
