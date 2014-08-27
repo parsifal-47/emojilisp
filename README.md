@@ -3,6 +3,8 @@ Emojilisp
 
 Javascript interpreter generator for emojilisp
 
+works in browser and node.js environment, demo is available at http://emojilisp.com
+
 to setup nodejs version use "make setup"
 
 to run emoji lisp interactive run "make run"
