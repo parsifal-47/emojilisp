@@ -36,13 +36,15 @@
 },
 {
     "name":"cdr example",
-    "program": ["(", 
-                    "cdr", 
-                        "(", 
-                            "list", 1, " ", 2, " ", 3, " ", 4, " ", 5,
-                        ")",
+    "program": ["(",
+                    "car", "(",
+                        "cdr", 
+                            "(", 
+                                "list", 1, " ", 2, " ", 3, " ", 4, " ", 5,
+                            ")",
+                    ")",
                 ")"],
-    "result": 5
+    "result": 2
 },
 {
     "name":"minus example",
