@@ -1,4 +1,4 @@
-Emojilisp
+Emojilisp [![Build Status](https://travis-ci.org/parsifal-47/emojilisp.svg?branch=master)](https://travis-ci.org/parsifal-47/emojilisp)
 ========
 
 Javascript interpreter generator for emojilisp
